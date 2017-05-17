@@ -20,5 +20,16 @@ namespace BetaMushroom.Controllers
         {
             return View();
         }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        public IActionResult Photos()
+        {
+            return View();
+        }
+
     }
 }
