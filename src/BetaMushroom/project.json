@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-BetaMushroom-cb2d4553-53c3-4d44-957d-153120e94a9f",
 
   "dependencies": {
@@ -41,10 +41,11 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc":  {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook": "1.1.2"
   },
 
   "tools": {
