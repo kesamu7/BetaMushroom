@@ -243,8 +243,11 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\WelcomeControl
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\ApplicationDbContext.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\00000000000000_CreateIdentitySchema.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170523220501_mushroomModelMigration.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170523220501_mushroomModelMigration.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ApplicationUser.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\Mushroom.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\AccountViewModels\ForgotPasswordViewModel.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\AccountViewModels\LoginViewModel.cs
