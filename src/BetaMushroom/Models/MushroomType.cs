@@ -5,10 +5,14 @@ using System.Threading.Tasks;
 
 namespace BetaMushroom.Models
 {
-    public class Mushroom
+    public class MushroomType
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
+
+        
+
+        public IList<MushroomActivity> Mushrooms { get; set; }
+
     }
 }

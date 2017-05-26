@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using BetaMushroom.Models;
 using BetaMushroom.Models.AccountViewModels;
 using BetaMushroom.Services;
+using Npgsql;
 
 namespace BetaMushroom.Controllers
 {

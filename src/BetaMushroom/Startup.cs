@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using BetaMushroom.Data;
 using BetaMushroom.Models;
 using BetaMushroom.Services;
+using Npgsql;
+
 
 namespace BetaMushroom
 {
@@ -53,6 +55,9 @@ namespace BetaMushroom
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+
+            var connection = @"Server=(localdb)/mssqllocaldb;Database=BetaMushroom;Trusted_Connection=True";
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

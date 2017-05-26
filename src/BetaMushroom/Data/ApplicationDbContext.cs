@@ -10,9 +10,14 @@ namespace BetaMushroom.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<MushroomActivity> Mushrooms { get; set; }
+        public DbSet<MushroomType> Types { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+            
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -21,6 +26,12 @@ namespace BetaMushroom.Data
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
+        }
+
+        public ApplicationDbContext()
+            : base()
+        {
+            
         }
     }
 

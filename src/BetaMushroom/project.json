@@ -45,7 +45,8 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.AspNetCore.Authentication.Facebook": "1.1.2"
+    "Microsoft.AspNetCore.Authentication.Facebook": "1.1.2",
+    "Npgsql": "3.2.2"
   },
 
   "tools": {
