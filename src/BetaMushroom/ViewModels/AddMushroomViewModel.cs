@@ -13,7 +13,7 @@ namespace BetaMushroom.ViewModels
     {
         
         [Required]
-        [Display(Name = "Cheese Name")]
+        [Display(Name = "Mushroom Name")]
         public string Name { get; set; }
 
         public string Notes { get; set; }
