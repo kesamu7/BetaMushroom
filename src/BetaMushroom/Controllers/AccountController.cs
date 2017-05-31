@@ -64,7 +64,8 @@ namespace BetaMushroom.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, "User logged in.");
-                    return RedirectToLocal(returnUrl);
+                    //return RedirectToLocal(returnUrl);
+                    return Redirect("/Welcome/Index");
                 }
                 if (result.RequiresTwoFactor)
                 {
