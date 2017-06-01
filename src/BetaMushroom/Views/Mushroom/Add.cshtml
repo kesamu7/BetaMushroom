@@ -1,3 +1,31 @@
 ﻿<!--This page is going to give users a form to add a new mushroom to their collection.-->
+@model BetaMushroom.ViewModels.AddMushroomViewModel
 
 <h1>Add a mushroom to your collection below.</h1>
+
+<form asp-controller="Mushroom" asp-action="Add" method="post">
+    <!--
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+        THE H3 BELOW WILL BE A DROPDOWN OF ALL MUSHROOMS IN DATABASE-->
+    <h3>Choose a mushroom type from the database</h3>
+
+    <p>If you cannot find a mushroom type in the database.</p>
+    <!--This h3 item below will be a link to the 'add type' page.-->
+    <h3>Add a mushroom to the databse.</h3>
+
+    <div class="form-group">
+        <label asp-for="Notes"></label>
+        <textarea class="form-control" asp-for="Notes"></textarea>
+        <span asp-validation-for="Notes"></span>
+    </div>
+
+
+    <input type="submit" value="Add Mushroom" />
+
+</form>
+
+

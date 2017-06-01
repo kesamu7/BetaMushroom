@@ -50,7 +50,7 @@ namespace BetaMushroom.Controllers
                 context.Mushrooms.Add(newMushroom);
                 context.SaveChanges();
 
-                return Redirect("/Mushroom/Index");
+                return Redirect("/Mushroom");
             }
 
             return View(addMushroomViewModel);

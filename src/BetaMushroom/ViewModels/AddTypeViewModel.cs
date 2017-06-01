@@ -12,7 +12,7 @@ namespace BetaMushroom.ViewModels
     public class AddTypeViewModel
     {
         [Required]
-        [Display(Name = "Name")]
+        [Display(Name = "Type")]
         public string Name { get; set; }
     }
 }
