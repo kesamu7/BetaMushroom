@@ -1,0 +1,15 @@
+﻿@model BetaMushroom.ViewModels.AddTypeViewModel
+
+<h1>This page will allow you to add different types of mushrooms to the database.</h1>
+
+<form asp-controller="Type" asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+
+    <input type="submit" />
+
+</form>

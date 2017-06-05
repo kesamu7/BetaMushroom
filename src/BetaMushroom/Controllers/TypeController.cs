@@ -48,7 +48,7 @@ namespace BetaMushroom.Controllers
 
                 context.Types.Add(newType);
                 context.SaveChanges();
-                return Redirect("/Types");
+                return Redirect("/Type/Index");
             }
 
             return View(addTypeViewModel);

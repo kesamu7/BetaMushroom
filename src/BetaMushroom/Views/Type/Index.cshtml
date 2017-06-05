@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BetaMushroom.Models.MushroomType>
+
+
+<h1>The different types of mushrooms in the database will be listed here.</h1>
+
+@foreach (var type in Model)
+{
+    <ul>
+        <li>
+            @type.Name
+            <br />
+        </li>
+    </ul>
+
+}
+
+<p><a asp-controller="Type" asp-action="Add">Add mushroom</a></p>
