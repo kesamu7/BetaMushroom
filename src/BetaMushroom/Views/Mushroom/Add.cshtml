@@ -4,22 +4,15 @@
 <h1>Add a mushroom to your collection below.</h1>
 
 <form asp-controller="Mushroom" asp-action="Add" method="post">
-    
+    <h3>Choose a mushroom type from the database</h3>
+
     <div class="form-group">
-        <label asp-for="Name"></label>
-        <input class="form-control" asp-for="Name" />
-        <span asp-validation-for="Name"></span>
+        <label asp-for="TypeID"></label>
+        <select class="form-control" asp-for="TypeID" asp-items="Model.Types"></select>
+        
     </div>
         
-    <h3>Choose a mushroom type from the database</h3>
-    <p><a asp-controller="Type" asp-action="Add">Add mushroom</a></p>
-
-
-    <p>If you cannot find a mushroom type in the database.</p>
-    <!--This h3 item below will be a link to the 'add type' page.-->
-    <h4>Add a mushroom to the databse.</h4>
-
-
+    
     <div class="form-group">
         <label asp-for="Notes"></label>
         <textarea class="form-control" asp-for="Notes"></textarea>
@@ -28,6 +21,16 @@
 
 
     <input type="submit" value="Add Mushroom" />
+    <br />
+    <br />
+    <p>- or -</p>
+    
+
+    <p>If you cannot find a mushroom type in the drop-down menu, add one.</p>
+
+    <p><a asp-controller="Type" asp-action="Add">Add mushroom type</a></p>
+
+
 
 </form>
 
