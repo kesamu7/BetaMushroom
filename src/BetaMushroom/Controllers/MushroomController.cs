@@ -43,7 +43,6 @@ namespace BetaMushroom.Controllers
                 {
                     
                     Type = mushroomType,
-                    TypeID = addMushroomViewModel.TypeID,
                     Notes = addMushroomViewModel.Notes,
                 };
 
