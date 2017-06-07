@@ -18,6 +18,8 @@ namespace BetaMushroom.ViewModels
 
         public string Notes { get; set; }
 
+        public int Quantity { get; set; }
+
         [Required]
         [Display(Name = "Type")]
         public int TypeID { get; set; }
