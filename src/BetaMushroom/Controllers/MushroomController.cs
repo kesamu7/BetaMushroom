@@ -7,6 +7,7 @@ using BetaMushroom.Models;
 using BetaMushroom.ViewModels;
 using BetaMushroom.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 
 namespace BetaMushroom.Controllers
@@ -44,7 +45,8 @@ namespace BetaMushroom.Controllers
                     
                     Type = mushroomType,
                     Notes = addMushroomViewModel.Notes,
-                    Quantity = addMushroomViewModel.Quantity
+                    Quantity = addMushroomViewModel.Quantity,
+                    
                 };
 
                 context.Mushrooms.Add(newMushroom);
@@ -55,6 +57,9 @@ namespace BetaMushroom.Controllers
 
             return View(addMushroomViewModel);
         }
+
+        
+        
 
         
 

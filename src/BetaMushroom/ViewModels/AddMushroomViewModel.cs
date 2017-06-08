@@ -20,6 +20,8 @@ namespace BetaMushroom.ViewModels
 
         public int Quantity { get; set; }
 
+        public int Image { get; set; }
+
         [Required]
         [Display(Name = "Type")]
         public int TypeID { get; set; }
