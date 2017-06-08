@@ -11,6 +11,7 @@ namespace BetaMushroom.Models
         //public string Name { get; set; }
         public string Notes { get; set; }
         public byte [] MushroomImage { get; set; }
+        public int Quantity { get; set; }
 
         public int TypeID { get; set; }
         public MushroomType Type { get; set; }

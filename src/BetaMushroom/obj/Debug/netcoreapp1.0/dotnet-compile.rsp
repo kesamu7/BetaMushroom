@@ -251,6 +251,8 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\2017052322
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170523220501_mushroomModelMigration.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170526040931_newModelMigration.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170526040931_newModelMigration.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170608161208_mushQtyAddMigration.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170608161208_mushQtyAddMigration.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ApplicationUser.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\MushroomActivity.cs

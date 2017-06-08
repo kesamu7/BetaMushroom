@@ -44,6 +44,7 @@ namespace BetaMushroom.Controllers
                     
                     Type = mushroomType,
                     Notes = addMushroomViewModel.Notes,
+                    Quantity = addMushroomViewModel.Quantity
                 };
 
                 context.Mushrooms.Add(newMushroom);
