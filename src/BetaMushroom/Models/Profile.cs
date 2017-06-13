@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using BetaMushroom.Models;
+
 
 namespace BetaMushroom.Models
 {
+
+    public enum Gender
+    {
+        Male,
+        Female
+    }
+
+
     public class Profile
     {
         public int ID { get; set; }
+
+        public Gender Gender { get; set; }
 
         [Display(Name ="Username")]
         public string UserName { get; set; }
@@ -25,7 +37,6 @@ namespace BetaMushroom.Models
 
         public ApplicationUser User { get; set; }
 
-
-
+     
     }
 }

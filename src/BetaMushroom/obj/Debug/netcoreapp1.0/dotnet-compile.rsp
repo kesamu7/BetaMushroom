@@ -242,6 +242,7 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\AccountControl
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\HomeController.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\ManageController.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\MushroomController.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\ProfileController.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\TypeController.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\WelcomeController.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\ApplicationDbContext.cs
@@ -257,6 +258,10 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\2017060816
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170608163759_appUserModelfixMigration.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613004621_ProfileModeladdMigration.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613004621_ProfileModeladdMigration.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613192936_profileGenderAdd.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613192936_profileGenderAdd.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613193835_profileGenderUpdate.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613193835_profileGenderUpdate.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ApplicationUser.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\MushroomActivity.cs
