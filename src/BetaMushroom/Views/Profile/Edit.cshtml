@@ -23,17 +23,17 @@
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="ProfilePicture" class="col-md-2 control-label"></label>
+            <label class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="ProfilePicture" class="form-control" />
+                <input type="file" name="ProfilePictureFile" />
                 <span asp-validation-for="ProfilePicture" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <img src="~/uploads/@Model.ProfilePicture" class="profilePicture"/>
-                <input type="hidden" name="ProfilePictureFile" />            
+                <img src="~/uploads/@Model.User.Id/@Model.ProfilePicture" />
+                <input type="hidden" name="ProfilePicture" />            
             </div>
         </div>
         <div class="form-group">

@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using BetaMushroom.Data.Migrations;
 
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -68,7 +69,7 @@ namespace BetaMushroom.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,UserName,BirthDate,Description,ProfilePicture,ProfilePictureFile,User")] Profile profile, IFormFile ProfilePictureFile)
+        public async Task<IActionResult> Edit([Bind("ID,UserName,Birthdate,Description,ProfilePicture,ProfilePictureFile,User")] Profile profile, IFormFile ProfilePictureFile)
         {
             if (ModelState.IsValid)
             {
