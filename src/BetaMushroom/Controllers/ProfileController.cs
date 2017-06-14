@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using BetaMushroom.Models;
 using BetaMushroom.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -20,12 +23,14 @@ namespace BetaMushroom.Controllers
         private readonly ApplicationDbContext _context;
 
         private UserManager<ApplicationUser> _userManager;
+        private IHostingEnvironment _environment;
 
         
-        public ProfileController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public ProfileController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, IHostingEnvironment environment)
         {
             _context = context;
             _userManager = userManager;
+            _environment = environment;
         }
 
 
@@ -63,28 +68,36 @@ namespace BetaMushroom.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,UserName,BirthDate,Description,ProfilePicture,ProfilePictureFile,User")] Profile profile)
+        public async Task<IActionResult> Edit([Bind("Id,UserName,BirthDate,Description,ProfilePicture,ProfilePictureFile,User")] Profile profile, IFormFile ProfilePictureFile)
         {
             if (ModelState.IsValid)
             {
-                try
+                ApplicationUser currentUser = await _userManager.GetUserAsync(User);
+
+                if(ProfilePictureFile != null)
                 {
-                    _context.Update(profile);
-                    await _context.SaveChangesAsync();
+                    string uploadPath = Path.Combine(_environment.WebRootPath, "uploads");
+                    Directory.CreateDirectory(Path.Combine(uploadPath, currentUser.Id));
+
+                    string filename = ProfilePictureFile.FileName;
+                    if (filename.Contains('\\'))
+                    {
+                        filename = filename.Split('\\').Last();
+                    }
+
+                    using (FileStream fs = new FileStream(Path.Combine(uploadPath, currentUser.Id, filename), FileMode.Create))
+                    {
+                        await ProfilePictureFile.CopyToAsync(fs);
+                    }
+                    profile.ProfilePicture = filename;
+
+
                 }
 
-                catch (DbUpdateConcurrencyException)
-                {
-                    //if (!ProfileExists(profile.ID))
-                    //{
-                    //    return NotFound();
-                    //}
-                    //else
-                    //{
-                    //    throw;
-                    //}
-                }
-                return RedirectToAction("Index");
+
+                _context.Update(profile);
+                await _context.SaveChangesAsync();
+                
             }
             return View(profile);
         }

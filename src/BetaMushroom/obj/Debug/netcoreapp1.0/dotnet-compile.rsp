@@ -262,6 +262,8 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\2017061319
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613192936_profileGenderAdd.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613193835_profileGenderUpdate.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613193835_profileGenderUpdate.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170614021701_profilePictureUpdate.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170614021701_profilePictureUpdate.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ApplicationUser.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\MushroomActivity.cs
