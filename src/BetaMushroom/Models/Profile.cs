@@ -25,6 +25,7 @@ namespace BetaMushroom.Models
         [Display(Name ="Username")]
         public string UserName { get; set; }
 
+        [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
 
 

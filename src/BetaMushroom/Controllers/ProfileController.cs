@@ -63,7 +63,7 @@ namespace BetaMushroom.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,UserName,BirthDate,Description,ProfilePicture,User")] Profile profile)
+        public async Task<IActionResult> Edit([Bind("Id,UserName,BirthDate,Description,ProfilePicture,ProfilePictureFile,User")] Profile profile)
         {
             if (ModelState.IsValid)
             {
