@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using BetaMushroom.ViewModels;
 
-namespace BetaMushroom.ViewModels
+
+namespace BetaMushroom.Models
 {
     public class ProfileSearchResultViewModel
     {

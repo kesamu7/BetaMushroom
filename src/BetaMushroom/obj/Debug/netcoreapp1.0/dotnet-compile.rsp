@@ -264,11 +264,19 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\2017061319
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170613193835_profileGenderUpdate.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170614021701_profilePictureUpdate.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170614021701_profilePictureUpdate.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615200624_profileSearchUpdate.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615200624_profileSearchUpdate.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615211032_profileSearchNewerUpdate.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615211032_profileSearchNewerUpdate.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615211821_profileSearchfixUpdate1.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615211821_profileSearchfixUpdate1.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ApplicationUser.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\MushroomActivity.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\MushroomType.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\Profile.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ProfileSearchResultViewModel.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ProfileSearchViewModel.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\AccountViewModels\ForgotPasswordViewModel.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\AccountViewModels\LoginViewModel.cs
@@ -290,5 +298,3 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Services\ISmsSender.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Services\MessageServices.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\ViewModels\AddMushroomViewModel.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\ViewModels\AddTypeViewModel.cs
-C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\ViewModels\ProfileSearchResultViewModel.cs
-C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\ViewModels\ProfileSearchViewModel.cs

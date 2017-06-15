@@ -15,6 +15,7 @@ using BetaMushroom.Data.Migrations;
 using BetaMushroom.ViewModels;
 
 
+
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BetaMushroom.Controllers
@@ -58,9 +59,10 @@ namespace BetaMushroom.Controllers
         public IActionResult Search()
         {
             ProfileSearchViewModel vm = new ProfileSearchViewModel();
-
-            vm.MinAge = 13;
+            vm.MinAge = 18;
             vm.MaxAge = 100;
+            
+            
             
             return View(vm);
 
@@ -89,8 +91,10 @@ namespace BetaMushroom.Controllers
                               ID = p.ID,
 
 
-                          }).ToList();
+                          }
+                          ).ToList();
             }
+            return View("Result",result);
         }
 
         private int calculateAge(DateTime birthDate)
