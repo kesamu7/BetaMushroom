@@ -80,11 +80,9 @@ namespace BetaMushroom.Controllers
                     string uploadPath = Path.Combine(_environment.WebRootPath, "uploads");
                     Directory.CreateDirectory(Path.Combine(uploadPath, currentUser.Id));
 
-                    string filename = ProfilePictureFile.FileName;
-                    if (filename.Contains('\\'))
-                    {
-                        filename = filename.Split('\\').Last();
-                    }
+                    string filename = Path.GetFileName(ProfilePictureFile.FileName);
+                    
+
 
                     using (FileStream fs = new FileStream(Path.Combine(uploadPath, currentUser.Id, filename), FileMode.Create))
                     {
