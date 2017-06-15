@@ -13,5 +13,9 @@ namespace BetaMushroom.ViewModels
 
         [Display(Name = "I'm looking for ")]
         public string UserName { get; set; }
+
+        public int MinAge { get; set; }
+        public int MaxAge { get; set; }
+
     }
 }

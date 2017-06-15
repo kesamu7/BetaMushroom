@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Http;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using BetaMushroom.Data.Migrations;
+using BetaMushroom.ViewModels;
 
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -51,6 +52,56 @@ namespace BetaMushroom.Controllers
             }
 
             return View(profile);
+        }
+
+        [HttpGet]
+        public IActionResult Search()
+        {
+            ProfileSearchViewModel vm = new ProfileSearchViewModel();
+
+            vm.MinAge = 13;
+            vm.MaxAge = 100;
+            
+            return View(vm);
+
+        }
+
+        [HttpPost]
+        public IActionResult Search(ProfileSearchViewModel vm)
+        {
+            List<ProfileSearchResultViewModel> result = new List<ProfileSearchResultViewModel>();
+            if (ModelState.IsValid)
+            {
+                DateTime minDate = DateTime.Today.AddYears(-vm.MaxAge);
+                DateTime maxDate = DateTime.Today.AddYears(-vm.MinAge);
+
+                result = (from p in _context.Profiles
+                          where p.Gender == vm.Gender
+                          && p.Birthdate > minDate && p.Birthdate < maxDate
+
+                          select new ProfileSearchResultViewModel
+                          {
+                              UserName = p.UserName,
+                              ProfilePicture = $"{p.User.Id}/{p.ProfilePicture}",
+                              Age = calculateAge(p.Birthdate),
+                              Description = p.Description,                            
+                              Gender = p.Gender,
+                              ID = p.ID,
+
+
+                          }).ToList();
+            }
+        }
+
+        private int calculateAge(DateTime birthDate)
+        {
+            int age = DateTime.Today.Year - birthDate.Year;
+            if(birthDate > DateTime.Today.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age;
         }
 
 
