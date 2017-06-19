@@ -12,7 +12,7 @@ namespace BetaMushroom.ViewModels
     public class AddMushroomViewModel
     {
         
-        [Required]
+        
         [Display(Name = "Mushroom Name")]
         public string Name { get; set; }
 
@@ -28,14 +28,12 @@ namespace BetaMushroom.ViewModels
 
         public List<SelectListItem> Types { get; set; }
 
-        public AddMushroomViewModel() { }
+        public AddMushroomViewModel() { Types = new List<SelectListItem>(); }
 
 
-
-        public AddMushroomViewModel(IEnumerable<MushroomType> types)
+        public void Shrooms(IEnumerable<MushroomType> types)
         {
-            Types = new List<SelectListItem>();
-            foreach(var type in types)
+            foreach (var type in types)
             {
                 Types.Add(new SelectListItem
                 {
@@ -43,6 +41,15 @@ namespace BetaMushroom.ViewModels
                     Text = type.Name
                 });
             }
+
+            
+        }
+
+
+        public AddMushroomViewModel(IEnumerable<MushroomType> types)
+        {
+            Types = new List<SelectListItem>();
+            Shrooms(types);
         }
 
 

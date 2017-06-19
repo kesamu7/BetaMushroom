@@ -55,6 +55,8 @@ namespace BetaMushroom.Controllers
                 return Redirect("/Mushroom/Index");
             }
 
+            addMushroomViewModel.Shrooms(context.Types.ToList());
+
             return View(addMushroomViewModel);
         }
 

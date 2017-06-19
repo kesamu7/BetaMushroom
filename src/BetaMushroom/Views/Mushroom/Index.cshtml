@@ -10,13 +10,14 @@
     <tr>
         <th>Type</th>
         <th>Notes</th>
+        <th>Quantity</th>
     </tr>
 
 
     @foreach (var shroom in Model)
     {
         <tr>
-            <td>@shroom.Type</td>
+            <td>@shroom.Type.Name</td>
             <td>@shroom.Notes</td>
             <td>@shroom.Quantity</td>
         </tr>
