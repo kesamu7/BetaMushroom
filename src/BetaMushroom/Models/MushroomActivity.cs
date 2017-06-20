@@ -15,5 +15,7 @@ namespace BetaMushroom.Models
 
         public int TypeID { get; set; }
         public MushroomType Type { get; set; }
+
+        
     }
 }

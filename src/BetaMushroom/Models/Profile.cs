@@ -38,6 +38,8 @@ namespace BetaMushroom.Models
 
         public ApplicationUser User { get; set; }
 
+        
+
      
     }
 }

@@ -27,6 +27,7 @@ namespace BetaMushroom.Controllers
 
         private UserManager<ApplicationUser> _userManager;
         private IHostingEnvironment _environment;
+        
 
         
         public ProfileController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, IHostingEnvironment environment)
@@ -96,6 +97,40 @@ namespace BetaMushroom.Controllers
             }
             return View("Result",result);
         }
+
+        public IActionResult Add()
+        {
+            AddMushroomViewModel addMushroomViewModel = new AddMushroomViewModel(_context.Types.ToList());
+            return View(addMushroomViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Add(AddMushroomViewModel addMushroomViewModel)
+        {
+            MushroomType mushroomType = _context.Types.Single(m => m.ID == addMushroomViewModel.TypeID);
+
+            if (ModelState.IsValid)
+            {
+                MushroomActivity newMushroom = new MushroomActivity
+                {
+
+                    Type = mushroomType,
+                    Notes = addMushroomViewModel.Notes,
+                    Quantity = addMushroomViewModel.Quantity,
+
+                };
+
+                _context.Mushrooms.Add(newMushroom);
+                _context.SaveChanges();
+
+                return Redirect("/Profile/Index");
+            }
+
+            addMushroomViewModel.Shrooms(_context.Types.ToList());
+
+            return View(addMushroomViewModel);
+        }
+
 
         private int calculateAge(DateTime birthDate)
         {

@@ -42,7 +42,7 @@
                     @if (SignInManager.IsSignedIn(User))
                     {
                         <li><a asp-area="" asp-controller="Profile" asp-action="Edit">My Profile</a></li>
-                        <li><a asp-area="" asp-controller="Mushroom" asp-action="Index">My Collection</a></li>
+                        <li><a asp-area="" asp-controller="Profile" asp-action="Index">My Collection</a></li>
                         <li><a href="@Url.Action("Search","Profile")">Search</a></li>
 
                     }

@@ -270,6 +270,10 @@ C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\2017061521
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615211032_profileSearchNewerUpdate.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615211821_profileSearchfixUpdate1.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170615211821_profileSearchfixUpdate1.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170620225930_mushroomModelsAddedtoProfileModel.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170620225930_mushroomModelsAddedtoProfileModel.Designer.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170620234029_shroomProfileRelationReverse.cs
+C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170620234029_shroomProfileRelationReverse.Designer.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ApplicationUser.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\MushroomActivity.cs
