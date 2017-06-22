@@ -8,13 +8,14 @@ using BetaMushroom.ViewModels;
 using BetaMushroom.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
-
+using Microsoft.AspNetCore.Identity;
 
 namespace BetaMushroom.Controllers
 {
     public class MushroomController : Controller    
     {
         private ApplicationDbContext context;
+        
 
         public MushroomController(ApplicationDbContext dbContext)
         {

@@ -38,8 +38,10 @@ namespace BetaMushroom.Models
 
         public ApplicationUser User { get; set; }
 
-        
+        public IList<MushroomActivity> Mushrooms { get; set; }
 
-     
+
+
+
     }
 }

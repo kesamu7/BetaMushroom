@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using BetaMushroom.Models;
 using System.Data;
 using BetaMushroom.Data;
+using System.Security.Claims;
 
 namespace BetaMushroom.Models
 {
@@ -17,11 +18,10 @@ namespace BetaMushroom.Models
 
         public Profile Profile { get; set; }
 
-        public MushroomActivity mushActivity { get; set; }
-
         public MushroomType mushType { get; set; }
 
         public string FirstName { get; set; }
 
+        
     }
 }
