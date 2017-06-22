@@ -107,7 +107,7 @@ namespace BetaMushroom.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Profile = new Models.Profile() };
+                var user = new ApplicationUser { UserName = model.FirstName, Email = model.Email, FirstName = model.FirstName, Profile = new Models.Profile() };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -119,6 +119,10 @@ namespace BetaMushroom.Controllers
                     //    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>");
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation(3, "User created a new account with password.");
+
+                    //Add User Claims for first name. You can check for the success of addition
+                    await _userManager.AddClaimAsync(user, new Claim("FirstName", user.FirstName));
+
                     return RedirectToLocal(returnUrl);
                 }
                 AddErrors(result);

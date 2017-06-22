@@ -232,6 +232,7 @@
 -r:"C:\Users\Kelvin\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Kelvin\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll"
 -resource:"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\obj\Debug\netcoreapp1.0\BetaMushroomdotnet-compile.deps.json",BetaMushroom.deps.json
+"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\ClaimsPrincipalExtension.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Program.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Startup.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Controllers\AccountController.cs"
@@ -270,6 +271,10 @@
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170620225930_mushroomModelsAddedtoProfileModel.Designer.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170620234029_shroomProfileRelationReverse.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170620234029_shroomProfileRelationReverse.Designer.cs"
+"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170621165151_addShroomPropsToAppUser.cs"
+"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170621165151_addShroomPropsToAppUser.Designer.cs"
+"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170622001523_firstNameDisplayUpdate.cs"
+"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\20170622001523_firstNameDisplayUpdate.Designer.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Data\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\ApplicationUser.cs"
 "C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Models\MushroomActivity.cs"
