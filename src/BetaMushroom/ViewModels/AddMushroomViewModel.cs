@@ -11,8 +11,36 @@ namespace BetaMushroom.ViewModels
 {
     public class AddMushroomViewModel
     {
-        
-        
+        private List<MushroomType> list;
+
+        public Profile Profile { get; set; }
+        public List<SelectListItem> Mushrooms { get; set; }
+
+        public int ProfileID { get; set; }
+        public int MushroomID { get; set; }
+
+        public AddMushroomViewModel() { }
+
+        public AddMushroomViewModel(Profile profile, IEnumerable<MushroomActivity> mushrooms)
+        {
+            Mushrooms = new List<SelectListItem>();
+
+            foreach(var shroom in mushrooms)
+            {
+                Mushrooms.Add(new SelectListItem
+                {
+                    Value = shroom.ID.ToString(),
+                    Text = shroom.Name
+                });
+            }
+            Profile = profile;
+        }
+
+        public AddMushroomViewModel(List<MushroomType> list)
+        {
+            this.list = list;
+        }
+
         [Display(Name = "Mushroom Name")]
         public string Name { get; set; }
 
@@ -28,29 +56,7 @@ namespace BetaMushroom.ViewModels
 
         public List<SelectListItem> Types { get; set; }
 
-        public AddMushroomViewModel() { Types = new List<SelectListItem>(); }
-
-
-        public void Shrooms(IEnumerable<MushroomType> types)
-        {
-            foreach (var type in types)
-            {
-                Types.Add(new SelectListItem
-                {
-                    Value = type.ID.ToString(),
-                    Text = type.Name
-                });
-            }
-
-            
-        }
-
-
-        public AddMushroomViewModel(IEnumerable<MushroomType> types)
-        {
-            Types = new List<SelectListItem>();
-            Shrooms(types);
-        }
+        
 
 
     }

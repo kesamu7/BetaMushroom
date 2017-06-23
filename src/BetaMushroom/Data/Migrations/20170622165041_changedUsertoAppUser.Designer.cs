@@ -8,9 +8,10 @@ using BetaMushroom.Data;
 namespace BetaMushroom.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170622165041_changedUsertoAppUser")]
+    partial class changedUsertoAppUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -57,6 +58,8 @@ namespace BetaMushroom.Data.Migrations
                     b.Property<string>("UserName")
                         .HasAnnotation("MaxLength", 256);
 
+                    b.Property<int?>("mushTypeID");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -69,6 +72,9 @@ namespace BetaMushroom.Data.Migrations
                     b.HasIndex("ProfileId")
                         .IsUnique();
 
+                    b.HasIndex("mushTypeID")
+                        .IsUnique();
+
                     b.ToTable("AspNetUsers");
                 });
 
@@ -79,9 +85,9 @@ namespace BetaMushroom.Data.Migrations
 
                     b.Property<int>("AppUserId");
 
-                    b.Property<byte[]>("MushroomImage");
+                    b.Property<string>("AppUserId1");
 
-                    b.Property<string>("Name");
+                    b.Property<byte[]>("MushroomImage");
 
                     b.Property<string>("Notes");
 
@@ -91,15 +97,13 @@ namespace BetaMushroom.Data.Migrations
 
                     b.Property<int>("TypeID");
 
-                    b.Property<string>("UserId");
-
                     b.HasKey("ID");
+
+                    b.HasIndex("AppUserId1");
 
                     b.HasIndex("ProfileID");
 
                     b.HasIndex("TypeID");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Mushrooms");
                 });
@@ -111,12 +115,7 @@ namespace BetaMushroom.Data.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("UserId");
-
                     b.HasKey("ID");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("Types");
                 });
@@ -139,26 +138,6 @@ namespace BetaMushroom.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Profiles");
-                });
-
-            modelBuilder.Entity("BetaMushroom.Models.ProfileShrooms", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("MushroomID");
-
-                    b.Property<int>("ProfileID");
-
-                    b.Property<int>("ShroomID");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("MushroomID");
-
-                    b.HasIndex("ProfileID");
-
-                    b.ToTable("ProfileShrooms");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole", b =>
@@ -274,10 +253,18 @@ namespace BetaMushroom.Data.Migrations
                         .WithOne("User")
                         .HasForeignKey("BetaMushroom.Models.ApplicationUser", "ProfileId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BetaMushroom.Models.MushroomType", "mushType")
+                        .WithOne("User")
+                        .HasForeignKey("BetaMushroom.Models.ApplicationUser", "mushTypeID");
                 });
 
             modelBuilder.Entity("BetaMushroom.Models.MushroomActivity", b =>
                 {
+                    b.HasOne("BetaMushroom.Models.ApplicationUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId1");
+
                     b.HasOne("BetaMushroom.Models.Profile")
                         .WithMany("Mushrooms")
                         .HasForeignKey("ProfileID");
@@ -285,29 +272,6 @@ namespace BetaMushroom.Data.Migrations
                     b.HasOne("BetaMushroom.Models.MushroomType", "Type")
                         .WithMany("Mushrooms")
                         .HasForeignKey("TypeID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("BetaMushroom.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("BetaMushroom.Models.MushroomType", b =>
-                {
-                    b.HasOne("BetaMushroom.Models.ApplicationUser", "User")
-                        .WithOne("mushType")
-                        .HasForeignKey("BetaMushroom.Models.MushroomType", "UserId");
-                });
-
-            modelBuilder.Entity("BetaMushroom.Models.ProfileShrooms", b =>
-                {
-                    b.HasOne("BetaMushroom.Models.MushroomActivity", "Mushroom")
-                        .WithMany()
-                        .HasForeignKey("MushroomID");
-
-                    b.HasOne("BetaMushroom.Models.Profile", "Profile")
-                        .WithMany()
-                        .HasForeignKey("ProfileID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

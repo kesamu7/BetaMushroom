@@ -8,7 +8,7 @@ namespace BetaMushroom.Models
     public class MushroomActivity
     {
         public int ID { get; set; }
-        //public string Name { get; set; }
+        public string Name { get; set; }
         public string Notes { get; set; }
         public byte [] MushroomImage { get; set; }
         public int Quantity { get; set; }

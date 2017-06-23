@@ -28,38 +28,8 @@ namespace BetaMushroom.Controllers
             return View(mushrooms);
         }
 
-        public IActionResult Add()
-        {
-            AddMushroomViewModel addMushroomViewModel = new AddMushroomViewModel(context.Types.ToList());
-            return View(addMushroomViewModel);
-        }
+        
 
-        [HttpPost]
-        public IActionResult Add(AddMushroomViewModel addMushroomViewModel)
-        {
-            MushroomType mushroomType = context.Types.Single(m => m.ID == addMushroomViewModel.TypeID);
-
-            if (ModelState.IsValid)
-            {
-                MushroomActivity newMushroom = new MushroomActivity
-                {
-                    
-                    Type = mushroomType,
-                    Notes = addMushroomViewModel.Notes,
-                    Quantity = addMushroomViewModel.Quantity,
-                    
-                };
-
-                context.Mushrooms.Add(newMushroom);
-                context.SaveChanges();
-
-                return Redirect("/Mushroom/Index");
-            }
-
-            addMushroomViewModel.Shrooms(context.Types.ToList());
-
-            return View(addMushroomViewModel);
-        }
 
         
         

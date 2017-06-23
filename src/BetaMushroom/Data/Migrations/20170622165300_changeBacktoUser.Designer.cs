@@ -8,9 +8,10 @@ using BetaMushroom.Data;
 namespace BetaMushroom.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170622165300_changeBacktoUser")]
+    partial class changeBacktoUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -81,8 +82,6 @@ namespace BetaMushroom.Data.Migrations
 
                     b.Property<byte[]>("MushroomImage");
 
-                    b.Property<string>("Name");
-
                     b.Property<string>("Notes");
 
                     b.Property<int?>("ProfileID");
@@ -139,26 +138,6 @@ namespace BetaMushroom.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Profiles");
-                });
-
-            modelBuilder.Entity("BetaMushroom.Models.ProfileShrooms", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("MushroomID");
-
-                    b.Property<int>("ProfileID");
-
-                    b.Property<int>("ShroomID");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("MushroomID");
-
-                    b.HasIndex("ProfileID");
-
-                    b.ToTable("ProfileShrooms");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole", b =>
@@ -297,18 +276,6 @@ namespace BetaMushroom.Data.Migrations
                     b.HasOne("BetaMushroom.Models.ApplicationUser", "User")
                         .WithOne("mushType")
                         .HasForeignKey("BetaMushroom.Models.MushroomType", "UserId");
-                });
-
-            modelBuilder.Entity("BetaMushroom.Models.ProfileShrooms", b =>
-                {
-                    b.HasOne("BetaMushroom.Models.MushroomActivity", "Mushroom")
-                        .WithMany()
-                        .HasForeignKey("MushroomID");
-
-                    b.HasOne("BetaMushroom.Models.Profile", "Profile")
-                        .WithMany()
-                        .HasForeignKey("ProfileID")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

@@ -38,6 +38,12 @@ namespace BetaMushroom.Controllers
         }
 
 
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Mushrooms.ToListAsync());
+        }
+
+
         public async Task<IActionResult> Details(int? id)
         {
             if(id == null)
@@ -110,6 +116,46 @@ namespace BetaMushroom.Controllers
 
             return age;
         }
+
+
+        public IActionResult AddShroom(int id)
+        {
+            Profile profile = _context.Profiles.Single(p => p.ID == id);
+            List<MushroomActivity> mushrooms = _context.Mushrooms.ToList();
+            return View(new AddProfileShroomViewModel(profile, mushrooms));
+        }
+
+        [HttpPost]
+        public IActionResult AddShroom(AddProfileShroomViewModel addProfileShroomViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var mushroomID = addProfileShroomViewModel.MushroomID;
+                var profileID = addProfileShroomViewModel.ProfileID;
+
+                IList<ProfileShrooms> existingItems = _context.ProfileShrooms
+                    .Where(pm => pm.ShroomID == mushroomID)
+                    .Where(pm => pm.ProfileID == profileID).ToList();
+
+                if(existingItems.Count == 0)
+                {
+                    ProfileShrooms profileShroom = new ProfileShrooms
+                    {
+                        ShroomID = mushroomID,
+                        ProfileID = profileID
+                    };
+
+                    _context.ProfileShrooms.Add(profileShroom);
+                    _context.SaveChanges();
+                }
+                return Redirect(string.Format("/Profile/ViewShrooms/{0}", addProfileShroomViewModel.ProfileID));
+            }
+            return View(addProfileShroomViewModel);
+        }
+
+
+        
+
 
 
         // GET: Profile/Edit/5

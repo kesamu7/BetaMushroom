@@ -1,0 +1,17 @@
+﻿@model BetaMushroom.ViewModels.AddProfileShroomViewModel
+
+@{ 
+    ViewBag.Title = "Add a Mushroom to collection: " + Model.Profile;
+}
+
+<form asp-controller ="Profile" asp-action="AddShroom" method="post">
+
+    <div class="form-group">
+        <label asp-for="Mushrooms"></label>
+        <select class="form-control" asp-for="MushroomID" asp-items="Model.Mushrooms"></select>
+    </div>
+
+    <input type="hidden" name="ProfileID" value="@Model.Profile.ID" />
+    <input type="submit" value="Add Mushroom" />
+
+</form>

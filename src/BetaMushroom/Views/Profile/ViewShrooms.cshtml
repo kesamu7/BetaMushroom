@@ -1,0 +1,23 @@
+﻿@model BetaMushroom.ViewModels.ViewProfileShroomViewModel
+
+@{ 
+    ViewBag.Title = Model.Profile;
+}
+
+
+<ul>
+    @foreach(var profileShroom in Model.Mushrooms)
+    {
+        <li>@profileShroom.Mushroom.Name</li>
+
+    }
+</ul>
+
+@if(Model.Mushrooms.Count == 0)
+{
+    <p><i>No mushrooms in your collection.</i></p>
+
+}
+
+
+<p><a asp-controller = "Profile" asp-action="AddShroom" asp-route-id="@Model.Profile.ID">Add Mushroom></a></p>

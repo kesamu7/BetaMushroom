@@ -14,6 +14,7 @@ namespace BetaMushroom.Data
         public DbSet<MushroomActivity> Mushrooms { get; set; }
         public DbSet<MushroomType> Types { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+        public DbSet<ProfileShrooms> ProfileShrooms { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
