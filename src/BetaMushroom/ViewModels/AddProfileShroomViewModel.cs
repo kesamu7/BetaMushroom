@@ -26,7 +26,7 @@ namespace BetaMushroom.ViewModels
                 Mushrooms.Add(new SelectListItem
                 {
                     Value = mushroom.ID.ToString(),
-                    Text = mushroom.Type.ToString()
+                    Text = mushroom.Name
                 });
             }
             Profile = profile;
