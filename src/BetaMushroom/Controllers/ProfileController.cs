@@ -40,6 +40,7 @@ namespace BetaMushroom.Controllers
 
         public async Task<IActionResult> Index()
         {
+            List<Profile> profiles = _context.Profiles.ToList();
             return View(await _context.Mushrooms.ToListAsync());
         }
 
@@ -120,7 +121,7 @@ namespace BetaMushroom.Controllers
 
         public IActionResult AddShroom(int id)
         {
-            Profile profile = _context.Profiles.Single(p => p.ID == id);
+            Profile profile = _context.Profiles.SingleOrDefault(p => p.ID == id);
             List<MushroomActivity> mushrooms = _context.Mushrooms.ToList();
             return View(new AddProfileShroomViewModel(profile, mushrooms));
         }
