@@ -4,14 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using BetaMushroom.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 
 namespace BetaMushroom.ViewModels
 {
     public class AddProfileShroomViewModel
     {
-        public List<MushroomActivity> mushrooms;
+        
 
         public Profile Profile { get; set; }
+
         public List<SelectListItem> Mushrooms { get; set; }
         
         public int ProfileID { get; set; }
@@ -19,7 +21,7 @@ namespace BetaMushroom.ViewModels
 
         public AddProfileShroomViewModel() { }
 
-        public AddProfileShroomViewModel(Profile profile, IEnumerable<MushroomType> mushrooms)
+        public AddProfileShroomViewModel(Profile profile, IEnumerable<MushroomActivity> mushrooms)
         {
             Mushrooms = new List<SelectListItem>();
 
@@ -34,10 +36,12 @@ namespace BetaMushroom.ViewModels
             Profile = profile;
         }
 
+
+        /*
         public AddProfileShroomViewModel(Profile profile, List<MushroomActivity> mushrooms)
         {
             Profile = profile;
             this.mushrooms = mushrooms;
-        }
+        }*/
     }
 }
