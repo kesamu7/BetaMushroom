@@ -9,6 +9,8 @@ namespace BetaMushroom.ViewModels
 {
     public class AddProfileShroomViewModel
     {
+        public List<MushroomActivity> mushrooms;
+
         public Profile Profile { get; set; }
         public List<SelectListItem> Mushrooms { get; set; }
         
@@ -17,7 +19,7 @@ namespace BetaMushroom.ViewModels
 
         public AddProfileShroomViewModel() { }
 
-        public AddProfileShroomViewModel(Profile profile, IEnumerable<MushroomActivity> mushrooms)
+        public AddProfileShroomViewModel(Profile profile, IEnumerable<MushroomType> mushrooms)
         {
             Mushrooms = new List<SelectListItem>();
 
@@ -30,6 +32,12 @@ namespace BetaMushroom.ViewModels
                 });
             }
             Profile = profile;
+        }
+
+        public AddProfileShroomViewModel(Profile profile, List<MushroomActivity> mushrooms)
+        {
+            Profile = profile;
+            this.mushrooms = mushrooms;
         }
     }
 }
