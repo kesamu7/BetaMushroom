@@ -38,7 +38,7 @@ namespace BetaMushroom.Models
 
         public ApplicationUser User { get; set; }
 
-        public IList<ProfileShrooms> Mushrooms { get; set; } = new List<ProfileShrooms>();
+        public IList<MushroomActivity> Mushrooms { get; set; } = new List<MushroomActivity>();
 
 
 

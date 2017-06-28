@@ -21,7 +21,7 @@ namespace BetaMushroom.ViewModels
 
         public AddProfileShroomViewModel() { }
 
-        public AddProfileShroomViewModel(Profile profile, IEnumerable<MushroomActivity> mushrooms)
+        public AddProfileShroomViewModel(Profile profile, IEnumerable<MushroomType> mushrooms)
         {
             Mushrooms = new List<SelectListItem>();
 

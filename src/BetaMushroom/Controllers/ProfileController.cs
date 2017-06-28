@@ -122,7 +122,7 @@ namespace BetaMushroom.Controllers
         public IActionResult AddShroom(int id)
         {
             Profile profile = _context.Profiles.SingleOrDefault(p => p.ID == id);
-            List<MushroomActivity> mushrooms = _context.Mushrooms.ToList();
+            List<MushroomType> mushrooms = _context.Types.ToList();
             return View(new AddProfileShroomViewModel(profile, mushrooms));
         }
 
