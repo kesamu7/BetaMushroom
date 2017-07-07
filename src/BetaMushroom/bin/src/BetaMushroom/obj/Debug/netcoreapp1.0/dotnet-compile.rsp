@@ -1,5 +1,5 @@
---temp-output:C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\obj\Debug\netcoreapp1.0\
---out:C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\bin\Debug\netcoreapp1.0\BetaMushroom.dll
+--temp-output:C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\bin\src\BetaMushroom\obj\Debug\netcoreapp1.0\
+--out:C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\bin\src\BetaMushroom\bin\Debug\netcoreapp1.0\BetaMushroom.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -235,7 +235,7 @@
 --reference:C:\Users\Kelvin\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Kelvin\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Kelvin\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\obj\Debug\netcoreapp1.0\BetaMushroomdotnet-compile.deps.json",BetaMushroom.deps.json
+--resource:"C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\bin\src\BetaMushroom\obj\Debug\netcoreapp1.0\BetaMushroomdotnet-compile.deps.json",BetaMushroom.deps.json
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\ClaimsPrincipalExtension.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Program.cs
 C:\Users\Kelvin\Desktop\BetaMushroom\src\BetaMushroom\Startup.cs
