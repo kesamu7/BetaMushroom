@@ -46,7 +46,9 @@
       "type": "build"
     },
     "Microsoft.AspNetCore.Authentication.Facebook": "1.1.2",
-    "Npgsql": "3.2.2"
+    "Npgsql": "3.2.2",
+    "Google.Apis.Webfonts.v1": "1.27.1.426",
+    "NUnitTestAdapter": "2.1.1"
   },
 
   "tools": {

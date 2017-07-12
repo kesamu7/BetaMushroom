@@ -40,7 +40,7 @@ namespace BetaMushroom.Models
 
         public IList<MushroomActivity> Mushrooms { get; set; } = new List<MushroomActivity>();
 
-
+        public Profile ProfileID { get; set; }
 
 
 

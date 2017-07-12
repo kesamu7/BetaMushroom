@@ -101,7 +101,7 @@ namespace BetaMushroom
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Welcome}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Login}/{id?}");
             });
         }
     }

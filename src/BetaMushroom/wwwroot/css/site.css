@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    
+    font-family:'Roboto Mono';
 }
 
 /* Wrapping element */
@@ -61,4 +61,10 @@ textarea {
 .img-responsive{
     text-align:center;
 
+}
+
+
+
+p{
+    font-family:'AR DESTINE';
 }

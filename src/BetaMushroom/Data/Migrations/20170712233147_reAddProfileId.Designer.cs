@@ -8,9 +8,10 @@ using BetaMushroom.Data;
 namespace BetaMushroom.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170712233147_reAddProfileId")]
+    partial class reAddProfileId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -126,15 +127,11 @@ namespace BetaMushroom.Data.Migrations
 
                     b.Property<int>("Gender");
 
-                    b.Property<int?>("ProfileIDID");
-
                     b.Property<string>("ProfilePicture");
 
                     b.Property<string>("UserName");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("ProfileIDID");
 
                     b.ToTable("Profiles");
                 });
@@ -291,13 +288,6 @@ namespace BetaMushroom.Data.Migrations
                     b.HasOne("BetaMushroom.Models.ApplicationUser", "User")
                         .WithOne("mushType")
                         .HasForeignKey("BetaMushroom.Models.MushroomType", "UserId");
-                });
-
-            modelBuilder.Entity("BetaMushroom.Models.Profile", b =>
-                {
-                    b.HasOne("BetaMushroom.Models.Profile", "ProfileID")
-                        .WithMany()
-                        .HasForeignKey("ProfileIDID");
                 });
 
             modelBuilder.Entity("BetaMushroom.Models.ProfileShrooms", b =>
